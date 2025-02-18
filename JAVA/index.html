@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 100vh; /* Full viewport height */
+            display: flex; /* Enables Flexbox */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            margin: 0; /* Remove default margin */
+            background-color: #f4f4f4; /* Optional: Light background */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.2);
+            width: 400px; /* Adjust as needed */
+        }
+        .score {
+            font-size: 24px;
+            margin: 20px;
+        }
+        .result {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+        }
+        .buttons button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <body>
+        <div class="container">
+            <h1>Rock Paper Scissors</h1>
+            <div class="score">Human: <span id="humanScore">0</span> | Computer: <span id="computerScore">0</span></div>
+            <div class="result" id="resultText">Choose Rock, Paper, or Scissors</div>
+    
+            <div class="buttons">
+                <button onclick="playGame('rock')">Rock</button>
+                <button onclick="playGame('paper')">Paper</button>
+                <button onclick="playGame('scissors')">Scissors</button>
+            </div>
+        </div>
+        <script src="script_webUI.js"></script>
+    </body>
+</html>
