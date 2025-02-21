@@ -1,0 +1,52 @@
+.fretboard {
+  position: relative;
+  width: 600px;
+  height: 100px;
+  background: #c9c7c5; /* Wood-like background */
+  border: 2px solid black;
+}
+
+/* Strings using ::before */
+.fretboard::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: silver;
+  box-shadow: 
+    0 -20px silver, 
+    0 -10px silver, 
+    0 10px silver, 
+    0 20px silver; /* Creates 6 strings */
+  z-index: 2;
+}
+
+/* Frets using normal div */
+.fret {
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: gray;
+  top: 0;
+  z-index: 1;
+}
+
+.fret[data-fret="3"] { left: 25%; }
+.fret[data-fret="5"] { left: 40%; }
+.fret[data-fret="7"] { left: 55%; }
+
+/* Fretboard inlay dots using ::after */
+.fretboard::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3; /* Appears above everything */
+}
