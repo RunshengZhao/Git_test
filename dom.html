@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Practice</title>
+</head>
+
+<body>
+    <h1>THE TITLE OF YOUR WEBPAGE</h1>
+    <div id="container"></div>
+
+    <script>
+        // Step 1: Select the container
+        const container = document.querySelector("#container");
+
+        // Step 2: Create a new <p> element
+        const redParagraph = document.createElement("p");
+        const blueh3 = document.createElement("h3");
+        const blackdiv = document.createElement("div");
+        const blackdivH1 = document.createElement("h1");
+        const blackdivP = document.createElement("p");
+
+        // Step 3: Add the text content
+        redParagraph.textContent = "Hey I’m red!";
+        blueh3.textContent = "I'm a blue h3!";
+        blackdivH1.textContent = "I'm in a div";
+        blackdivP.textContent = "ME TOO!";
+
+        // Step 4: Style the text to be red
+        redParagraph.style.color = "red";
+        blueh3.style.color = "blue";
+        blackdiv.style.border = "1px solid black";
+        blackdiv.style.backgroundColor = "pink";
+
+        blackdiv.appendChild(blackdivH1);
+        blackdiv.appendChild(blackdivP);
+
+        // Step 5: Append the <p> to the container
+        container.appendChild(redParagraph);
+        container.appendChild(blueh3);
+        container.appendChild(blackdiv);
+    </script>
+</body>
+
+</html>
